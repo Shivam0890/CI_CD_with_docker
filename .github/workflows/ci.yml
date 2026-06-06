@@ -8,16 +8,54 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      -uses: actions/checkout@v4
+
+      -uses: actions/setup-python@v5
+       with:
+        python-version: "3.11"
+      
+      -run:
+        pip install -r requirement.txt
+
+      -run:
+        pytest
+
+
+  build:
+    runs-on: ubuntu-latest
+
+    needs: test
+
+    steps:
+      -uses: actions/checkout@v4
+
+      -run: echo "Build successfully "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      # - name: Checkout Code
+      #   uses: actions/checkout@v4
         
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - name: Install Dependencies
-        run: |
-          pip install -r requirement.txt
-      - name: Run Tests
-        run: |
-          pytest
+      # - name: Setup Python
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: "3.11"
+      # - name: Install Dependencies
+      #   run: |
+      #     pip install -r requirement.txt
+      # - name: Run Tests
+      #   run: |
+      #     pytest
