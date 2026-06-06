@@ -22,7 +22,7 @@ jobs:
       - run: pytest
 
       - name: Report create
-        run : "Create Test" > report.txt
+        run : echo "Create Test" > report.txt
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
