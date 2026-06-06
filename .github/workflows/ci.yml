@@ -29,7 +29,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: echo "Build Successful"
+      - name:  Build Docker Image
+        run : |
+          docker build -t cicd-app:v1 . 
 
 
 
