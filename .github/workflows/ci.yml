@@ -60,7 +60,7 @@ jobs:
 
       - name: PUSH IMAGE 
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME}}/cicd-app:${{ github.sha}}
+          docker push ${{ secrets.DOCKER_USERNAME }}/cicd-app:${{ github.sha }}
 
 
 
