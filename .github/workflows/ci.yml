@@ -59,7 +59,7 @@ jobs:
           # docker build -t cicd-app:v1 . 
 
 
-      - uses: docker/login-action@v3
+      - uses: docker/login-action@v4
       - name: PUSH IMAGE 
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/cicd-app:${{ github.sha }}
