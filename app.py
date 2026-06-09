@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-	return "Working on CI/CD Pipeline  ! "
+	return "Working on CI/CD Pipeline with docker  ! "
 
 
 if __name__ == "__main__":
