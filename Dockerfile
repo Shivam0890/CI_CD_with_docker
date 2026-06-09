@@ -2,7 +2,7 @@ FROM python:3.11
 
 WORKDIR /app
 
-COPY requirement.txt .
+COPY requirements.txt .
 # COPY missing.txt .
 
 RUN pip install -r requirements.txt
