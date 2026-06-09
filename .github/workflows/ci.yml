@@ -59,7 +59,7 @@ jobs:
           # docker build -t cicd-app:v1 . 
 
       - name: PUSH IMAGE 
-        run:
+        run: |
           docker push ${{ secrets.DOCKER_USERNAME}}/cicd-app:${{ github.sha}}
 
 
